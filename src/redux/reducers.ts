@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import { ItemsReducer } from './items/itemReducers'
 
 export const rootReducer = combineReducers({
-  // TODO: create reducers
+  ItemsReducer: ItemsReducer
 });
 
 export default rootReducer;

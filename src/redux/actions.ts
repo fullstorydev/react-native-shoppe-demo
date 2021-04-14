@@ -1,6 +1,7 @@
+import {ItemActions} from './items/itemActions'
 
 const RootActions = {
-  // TODO: create actions
+  ItemActions
 }
 
 export default RootActions
