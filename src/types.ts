@@ -6,7 +6,7 @@ export type Product = {
   unit: string
 }
 
-// item is an product but that's in cart
+// item is a product but is in cart
 export type Item = Product & {
   quantity: number
 }
