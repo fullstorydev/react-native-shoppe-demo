@@ -19,15 +19,20 @@ export const MarketScreen: React.FC = () => {
 
   const addToCart = (product: Product) => { dispatch(addItem({...product, quantity:1}))} 
   
-
+  // TODO:(sabrina) use dispatch to fetch data
   useEffect(() => {
+    console.log(PRODUCT_URL)
     if (PRODUCT_URL === "") {
       setProductList(products)
     } else {
       fetch(PRODUCT_URL)
       .then((response) => response.json())
       .then((json) => setProductList(json))
-      .catch((error) => console.error(error))
+      .catch((error) => {
+        console.error(error)
+        // just use the local json for demo purpose
+        setProductList(products)
+      })
       .finally(() => setLoading(false));
     }
   }, []);
