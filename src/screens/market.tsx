@@ -21,7 +21,6 @@ export const MarketScreen: React.FC = () => {
   
   // TODO:(sabrina) use dispatch to fetch data
   useEffect(() => {
-    console.log(PRODUCT_URL)
     if (PRODUCT_URL === "") {
       setProductList(products)
     } else {
