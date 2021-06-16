@@ -4,6 +4,8 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '10.0'
 
 target 'ShoppeDemo' do
+  pod 'FullStory', :http => 'https://ios-releases.fullstory.com/fullstory-1.15.1.tar.gz'
+
   config = use_native_modules!
 
   use_react_native!(
