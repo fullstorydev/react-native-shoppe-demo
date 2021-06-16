@@ -748,6 +748,27 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fullstory/babel-plugin-annotate-react@^2.0.0":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@fullstory/babel-plugin-annotate-react/-/babel-plugin-annotate-react-2.1.2.tgz#666aaab48d962627e1282a590e00f6edba30e9b4"
+  integrity sha512-tJkoG5jdF1w7aWJjzce/daqWOI9rYqkNg6WaAiBMFEwspGEa104bd3o5L9kPfzMdy5gP5e56AWHHibuGWCBI9A==
+
+"@fullstory/babel-plugin-react-native@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@fullstory/babel-plugin-react-native/-/babel-plugin-react-native-1.0.0.tgz#45163c8b2440019da4dbb09d2f811f21be7026d4"
+  integrity sha512-gKi6A+fqaTGa9Ofi4jNczIEsEZrjGRyZZ++FKOQEzfHNEC+eY9SJQ2A3FzVeikyIDrdC88qvmMqAjz8pTd0n8A==
+  dependencies:
+    "@babel/parser" "^7.0.0"
+    "@babel/types" "^7.0.0"
+
+"@fullstory/react-native@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@fullstory/react-native/-/react-native-1.0.1.tgz#6b3227e55728b005370e0b252cf4642b6209c989"
+  integrity sha512-dHEmWtLxubDPLmvVHpbEYE8IJtAdHI8kUCdXnF4gZk+fpIi6rlgXg8O6fVcjgZqcMJ9bDEa6gfSwkre5eGoJjw==
+  dependencies:
+    "@fullstory/babel-plugin-annotate-react" "^2.0.0"
+    "@fullstory/babel-plugin-react-native" "^1.0.0"
+
 "@hapi/hoek@^9.0.0":
   version "9.1.1"
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.1.1.tgz#9daf5745156fd84b8e9889a2dc721f0c58e894aa"

@@ -145,7 +145,6 @@
 				927EFC412C61E84BF9E30B9C /* Pods-ShoppeDemo-ShoppeDemoTests.debug.xcconfig */,
 				0EF7BAB8B3729C963B3A37DE /* Pods-ShoppeDemo-ShoppeDemoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -185,6 +184,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				C234A40415796C5B40E273F4 /* [CP] Embed Pods Frameworks */,
 				A26D687FFA26CA27E92E6CE2 /* [CP] Copy Pods Resources */,
+				04BFD6AB267A3B3400E012AB /* FullStory CommandLine */,
 			);
 			buildRules = (
 			);
@@ -264,6 +264,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
+		};
+		04BFD6AB267A3B3400E012AB /* FullStory CommandLine */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "FullStory CommandLine";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FullStory/tools/FullStoryCommandLine\" \"${CONFIGURATION_BUILD_DIR}/${WRAPPER_NAME}\"\n";
 		};
 		5C300D826349CF7DEB0AA40A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -524,6 +542,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ShoppeDemo;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

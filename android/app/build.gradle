@@ -1,5 +1,11 @@
 apply plugin: "com.android.application"
 
+apply plugin: "fullstory"
+
+fullstory {
+    org '<YOUR_ORG_HERE>'
+}
+
 import com.android.build.OutputFile
 
 /**
