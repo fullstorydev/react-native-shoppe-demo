@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View } from 'react-native';
+import { Button, View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { ScrollView } from 'react-native-gesture-handler';
 import { ActivityIndicator } from 'react-native-paper';
@@ -9,8 +9,12 @@ import { Product } from '../types';
 import products from '../data/products.json'
 import { AppDispatch } from '../redux/store';
 import RootActions from '../redux/actions';
+import {StackScreenProps} from '@react-navigation/stack';
 
-export const MarketScreen: React.FC = () => {
+
+type Props = StackScreenProps<any, 'MarketScreen'>;
+
+export const MarketScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
   const [isLoading, setLoading] = useState(true);
   const [productList, setProductList] = useState<Product[]>([]);
 
@@ -38,6 +42,10 @@ export const MarketScreen: React.FC = () => {
 
   return (
     <View>
+      <Button
+      title='test-navigate-to-cart'
+      onPress={() => {navigate('Cart')}}>
+        </Button>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         {isLoading
           ? <ActivityIndicator />

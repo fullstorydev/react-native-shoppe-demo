@@ -11,7 +11,9 @@ const Stack = createStackNavigator();
 export const AppNavigator = () => {
   return (
     <Provider store={store}>
-      <NavigationContainer>
+      <NavigationContainer
+      onStateChange={(state) => console.log('New state is', state)}
+      >
         <Stack.Navigator
           initialRouteName="Market"
         >
