@@ -6,7 +6,7 @@ import { ActivityIndicator } from 'react-native-paper';
 import { ProductCard } from '../components';
 import { PRODUCT_URL } from '../../env.json';
 import { Product } from '../types';
-import products from '../data/products.json'
+import products from '../data/products.json';
 import { AppDispatch } from '../redux/store';
 import RootActions from '../redux/actions';
 
@@ -17,35 +17,40 @@ export const MarketScreen: React.FC = () => {
   const { addItem } = RootActions.ItemActions;
   const dispatch: AppDispatch = useDispatch();
 
-  const addToCart = (product: Product) => { dispatch(addItem({...product, quantity:1}))} 
-  
+  const addToCart = (product: Product) => {
+    dispatch(addItem({ ...product, quantity: 1 }));
+  };
+
   // TODO:(sabrina) use dispatch to fetch data
   useEffect(() => {
-    if (PRODUCT_URL === "") {
-      setProductList(products)
+    if (PRODUCT_URL === '') {
+      setProductList(products);
     } else {
       fetch(PRODUCT_URL)
-      .then((response) => response.json())
-      .then((json) => setProductList(json))
-      .catch((error) => {
-        console.error(error)
-        // just use the local json for demo purpose
-        setProductList(products)
-      })
-      .finally(() => setLoading(false));
+        .then(response => response.json())
+        .then(json => setProductList(json))
+        .catch(error => {
+          console.error(error);
+          // just use the local json for demo purpose
+          setProductList(products);
+        })
+        .finally(() => setLoading(false));
     }
   }, []);
 
   return (
     <View>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        {isLoading
-          ? <ActivityIndicator />
-          : productList.map(product => <View key={product.title}>
-            <ProductCard product={product} addToCart={addToCart} />
-          </View>
-          )}
+        {isLoading ? (
+          <ActivityIndicator />
+        ) : (
+          productList.map(product => (
+            <View key={product.title}>
+              <ProductCard product={product} addToCart={addToCart} />
+            </View>
+          ))
+        )}
       </ScrollView>
     </View>
   );
-}
+};
