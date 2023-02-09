@@ -10,7 +10,7 @@ import App from '../src/App';
 import renderer from 'react-test-renderer';
 
 // Silence the warning https://github.com/facebook/react-native/issues/11094#issuecomment-263240420
-jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper')
+jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 
 it('renders correctly', () => {
   renderer.create(<App />);

@@ -1,7 +1,7 @@
-import {ItemActions} from './items/itemActions'
+import { ItemActions } from './items/itemActions';
 
 const RootActions = {
-  ItemActions
-}
+  ItemActions,
+};
 
-export default RootActions
+export default RootActions;
